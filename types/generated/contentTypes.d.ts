@@ -804,6 +804,76 @@ export interface ApiAnnualOilProductionAnnualOilProduction
   };
 }
 
+export interface ApiAnnualOilRefiningAnnualOilRefining
+  extends Schema.CollectionType {
+  collectionName: 'annual_oil_refinings';
+  info: {
+    singularName: 'annual-oil-refining';
+    pluralName: 'annual-oil-refinings';
+    displayName: 'Annual Oil Refining';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    year: Attribute.Integer;
+    dzo: Attribute.String;
+    value: Attribute.Decimal;
+    value_coef: Attribute.Decimal;
+    category: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::annual-oil-refining.annual-oil-refining',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::annual-oil-refining.annual-oil-refining',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiAnnualOilTransportationAnnualOilTransportation
+  extends Schema.CollectionType {
+  collectionName: 'annual_oil_transportations';
+  info: {
+    singularName: 'annual-oil-transportation';
+    pluralName: 'annual-oil-transportations';
+    displayName: 'Annual Oil Transportation';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    year: Attribute.Integer;
+    dzo: Attribute.String;
+    value: Attribute.Decimal;
+    value_coef: Attribute.Decimal;
+    category: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::annual-oil-transportation.annual-oil-transportation',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::annual-oil-transportation.annual-oil-transportation',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiCurrencyCurrency extends Schema.CollectionType {
   collectionName: 'currencies';
   info: {
@@ -874,6 +944,76 @@ export interface ApiDailyOilProductionDailyOilProduction
   };
 }
 
+export interface ApiDailyOilRefiningDailyOilRefining
+  extends Schema.CollectionType {
+  collectionName: 'daily_oil_refinings';
+  info: {
+    singularName: 'daily-oil-refining';
+    pluralName: 'daily-oil-refinings';
+    displayName: 'Daily Oil Refining';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    date: Attribute.Date;
+    dzo: Attribute.String;
+    value: Attribute.Decimal;
+    value_coef: Attribute.Decimal;
+    category: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::daily-oil-refining.daily-oil-refining',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::daily-oil-refining.daily-oil-refining',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiDailyOilTransportationDailyOilTransportation
+  extends Schema.CollectionType {
+  collectionName: 'daily_oil_transportations';
+  info: {
+    singularName: 'daily-oil-transportation';
+    pluralName: 'daily-oil-transportations';
+    displayName: 'Daily Oil Transportation';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    date: Attribute.Date;
+    dzo: Attribute.String;
+    value: Attribute.Decimal;
+    value_coef: Attribute.Decimal;
+    category: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::daily-oil-transportation.daily-oil-transportation',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::daily-oil-transportation.daily-oil-transportation',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiShareShare extends Schema.CollectionType {
   collectionName: 'shares';
   info: {
@@ -926,8 +1066,12 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
       'api::annual-oil-production.annual-oil-production': ApiAnnualOilProductionAnnualOilProduction;
+      'api::annual-oil-refining.annual-oil-refining': ApiAnnualOilRefiningAnnualOilRefining;
+      'api::annual-oil-transportation.annual-oil-transportation': ApiAnnualOilTransportationAnnualOilTransportation;
       'api::currency.currency': ApiCurrencyCurrency;
       'api::daily-oil-production.daily-oil-production': ApiDailyOilProductionDailyOilProduction;
+      'api::daily-oil-refining.daily-oil-refining': ApiDailyOilRefiningDailyOilRefining;
+      'api::daily-oil-transportation.daily-oil-transportation': ApiDailyOilTransportationDailyOilTransportation;
       'api::share.share': ApiShareShare;
     }
   }

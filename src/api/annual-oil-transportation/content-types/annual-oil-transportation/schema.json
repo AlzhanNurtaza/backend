@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "annual_oil_transportations",
+  "info": {
+    "singularName": "annual-oil-transportation",
+    "pluralName": "annual-oil-transportations",
+    "displayName": "Annual Oil Transportation"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "year": {
+      "type": "integer"
+    },
+    "dzo": {
+      "type": "string"
+    },
+    "value": {
+      "type": "decimal"
+    },
+    "value_coef": {
+      "type": "decimal"
+    },
+    "category": {
+      "type": "string"
+    }
+  }
+}

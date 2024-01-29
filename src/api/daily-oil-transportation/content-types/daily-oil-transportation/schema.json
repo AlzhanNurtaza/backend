@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "daily_oil_transportations",
+  "info": {
+    "singularName": "daily-oil-transportation",
+    "pluralName": "daily-oil-transportations",
+    "displayName": "Daily Oil Transportation"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "date": {
+      "type": "date"
+    },
+    "dzo": {
+      "type": "string"
+    },
+    "value": {
+      "type": "decimal"
+    },
+    "value_coef": {
+      "type": "decimal"
+    },
+    "category": {
+      "type": "string"
+    }
+  }
+}
