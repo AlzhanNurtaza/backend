@@ -1051,6 +1051,106 @@ export interface ApiDepositDeposit extends Schema.CollectionType {
   };
 }
 
+export interface ApiIncomeIncome extends Schema.CollectionType {
+  collectionName: 'incomes';
+  info: {
+    singularName: 'income';
+    pluralName: 'incomes';
+    displayName: 'Income';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    year: Attribute.Integer;
+    value: Attribute.Float;
+    category: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::income.income',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::income.income',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiQuarterlyIncomeQuarterlyIncome
+  extends Schema.CollectionType {
+  collectionName: 'quarterly_incomes';
+  info: {
+    singularName: 'quarterly-income';
+    pluralName: 'quarterly-incomes';
+    displayName: 'Quarterly Income';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    date: Attribute.Date;
+    value: Attribute.Float;
+    category: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::quarterly-income.quarterly-income',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::quarterly-income.quarterly-income',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiQuaterlyDepositQuaterlyDeposit
+  extends Schema.CollectionType {
+  collectionName: 'quaterly_deposits';
+  info: {
+    singularName: 'quaterly-deposit';
+    pluralName: 'quaterly-deposits';
+    displayName: 'Quaterly Deposit';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    date: Attribute.Date;
+    value: Attribute.Float;
+    category: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::quaterly-deposit.quaterly-deposit',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::quaterly-deposit.quaterly-deposit',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiShareShare extends Schema.CollectionType {
   collectionName: 'shares';
   info: {
@@ -1110,6 +1210,9 @@ declare module '@strapi/types' {
       'api::daily-oil-refining.daily-oil-refining': ApiDailyOilRefiningDailyOilRefining;
       'api::daily-oil-transportation.daily-oil-transportation': ApiDailyOilTransportationDailyOilTransportation;
       'api::deposit.deposit': ApiDepositDeposit;
+      'api::income.income': ApiIncomeIncome;
+      'api::quarterly-income.quarterly-income': ApiQuarterlyIncomeQuarterlyIncome;
+      'api::quaterly-deposit.quaterly-deposit': ApiQuaterlyDepositQuaterlyDeposit;
       'api::share.share': ApiShareShare;
     }
   }

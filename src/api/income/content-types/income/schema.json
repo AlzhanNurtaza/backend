@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "incomes",
+  "info": {
+    "singularName": "income",
+    "pluralName": "incomes",
+    "displayName": "Income",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "year": {
+      "type": "integer"
+    },
+    "value": {
+      "type": "float"
+    },
+    "category": {
+      "type": "string"
+    }
+  }
+}

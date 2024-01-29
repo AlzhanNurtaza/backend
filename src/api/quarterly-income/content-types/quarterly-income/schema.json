@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "quarterly_incomes",
+  "info": {
+    "singularName": "quarterly-income",
+    "pluralName": "quarterly-incomes",
+    "displayName": "Quarterly Income",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "date": {
+      "type": "date"
+    },
+    "value": {
+      "type": "float"
+    },
+    "category": {
+      "type": "string"
+    }
+  }
+}
