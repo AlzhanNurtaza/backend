@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "daily_oil_productions",
+  "info": {
+    "singularName": "daily-oil-production",
+    "pluralName": "daily-oil-productions",
+    "displayName": "Daily Oil Production",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "date": {
+      "type": "date"
+    },
+    "dzo": {
+      "type": "string"
+    },
+    "value": {
+      "type": "decimal"
+    },
+    "value_coef": {
+      "type": "decimal"
+    },
+    "category": {
+      "type": "string"
+    }
+  }
+}
