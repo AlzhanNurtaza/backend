@@ -4,7 +4,8 @@
   "info": {
     "singularName": "daily-oil-transportation",
     "pluralName": "daily-oil-transportations",
-    "displayName": "Daily Oil Transportation"
+    "displayName": "Daily Oil Transportation",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -24,6 +25,9 @@
       "type": "decimal"
     },
     "category": {
+      "type": "string"
+    },
+    "market": {
       "type": "string"
     }
   }

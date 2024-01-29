@@ -846,6 +846,7 @@ export interface ApiAnnualOilTransportationAnnualOilTransportation
     singularName: 'annual-oil-transportation';
     pluralName: 'annual-oil-transportations';
     displayName: 'Annual Oil Transportation';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -856,6 +857,7 @@ export interface ApiAnnualOilTransportationAnnualOilTransportation
     value: Attribute.Decimal;
     value_coef: Attribute.Decimal;
     category: Attribute.String;
+    market: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -986,6 +988,7 @@ export interface ApiDailyOilTransportationDailyOilTransportation
     singularName: 'daily-oil-transportation';
     pluralName: 'daily-oil-transportations';
     displayName: 'Daily Oil Transportation';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -996,6 +999,7 @@ export interface ApiDailyOilTransportationDailyOilTransportation
     value: Attribute.Decimal;
     value_coef: Attribute.Decimal;
     category: Attribute.String;
+    market: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
