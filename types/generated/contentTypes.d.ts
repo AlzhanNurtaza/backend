@@ -768,6 +768,38 @@ export interface PluginI18NLocale extends Schema.CollectionType {
   };
 }
 
+export interface ApiAccidentAccident extends Schema.CollectionType {
+  collectionName: 'accidents';
+  info: {
+    singularName: 'accident';
+    pluralName: 'accidents';
+    displayName: 'Accident';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    year: Attribute.Integer;
+    value: Attribute.Integer;
+    category: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::accident.accident',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::accident.accident',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiAnnualOilProductionAnnualOilProduction
   extends Schema.CollectionType {
   collectionName: 'annual_oil_productions';
@@ -1051,6 +1083,62 @@ export interface ApiDepositDeposit extends Schema.CollectionType {
   };
 }
 
+export interface ApiDtpDtp extends Schema.CollectionType {
+  collectionName: 'dtps';
+  info: {
+    singularName: 'dtp';
+    pluralName: 'dtps';
+    displayName: 'Dtp';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    year: Attribute.Integer;
+    value: Attribute.Integer;
+    category: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::dtp.dtp', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::dtp.dtp', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
+export interface ApiIncidentIncident extends Schema.CollectionType {
+  collectionName: 'incidents';
+  info: {
+    singularName: 'incident';
+    pluralName: 'incidents';
+    displayName: 'Incident';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    year: Attribute.Integer;
+    value: Attribute.Integer;
+    category: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::incident.incident',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::incident.incident',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiIncomeIncome extends Schema.CollectionType {
   collectionName: 'incomes';
   info: {
@@ -1077,6 +1165,40 @@ export interface ApiIncomeIncome extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::income.income',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiPurchasePurchase extends Schema.CollectionType {
+  collectionName: 'purchases';
+  info: {
+    singularName: 'purchase';
+    pluralName: 'purchases';
+    displayName: 'Purchase';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    year: Attribute.Integer;
+    category: Attribute.String;
+    value: Attribute.Decimal;
+    type: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::purchase.purchase',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::purchase.purchase',
       'oneToOne',
       'admin::user'
     > &
@@ -1202,6 +1324,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
+      'api::accident.accident': ApiAccidentAccident;
       'api::annual-oil-production.annual-oil-production': ApiAnnualOilProductionAnnualOilProduction;
       'api::annual-oil-refining.annual-oil-refining': ApiAnnualOilRefiningAnnualOilRefining;
       'api::annual-oil-transportation.annual-oil-transportation': ApiAnnualOilTransportationAnnualOilTransportation;
@@ -1210,7 +1333,10 @@ declare module '@strapi/types' {
       'api::daily-oil-refining.daily-oil-refining': ApiDailyOilRefiningDailyOilRefining;
       'api::daily-oil-transportation.daily-oil-transportation': ApiDailyOilTransportationDailyOilTransportation;
       'api::deposit.deposit': ApiDepositDeposit;
+      'api::dtp.dtp': ApiDtpDtp;
+      'api::incident.incident': ApiIncidentIncident;
       'api::income.income': ApiIncomeIncome;
+      'api::purchase.purchase': ApiPurchasePurchase;
       'api::quarterly-income.quarterly-income': ApiQuarterlyIncomeQuarterlyIncome;
       'api::quaterly-deposit.quaterly-deposit': ApiQuaterlyDepositQuaterlyDeposit;
       'api::share.share': ApiShareShare;
