@@ -889,7 +889,7 @@ export interface ApiAnnualOilTransportationAnnualOilTransportation
     value: Attribute.Decimal;
     value_coef: Attribute.Decimal;
     category: Attribute.String;
-    market: Attribute.String;
+    group: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -901,6 +901,40 @@ export interface ApiAnnualOilTransportationAnnualOilTransportation
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::annual-oil-transportation.annual-oil-transportation',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiBrentBrent extends Schema.CollectionType {
+  collectionName: 'brents';
+  info: {
+    singularName: 'brent';
+    pluralName: 'brents';
+    displayName: 'Brent';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    date: Attribute.Date;
+    title: Attribute.String;
+    arrow: Attribute.String;
+    value: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::brent.brent',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::brent.brent',
       'oneToOne',
       'admin::user'
     > &
@@ -935,6 +969,102 @@ export interface ApiCurrencyCurrency extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::currency.currency',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiDailyAccidentDailyAccident extends Schema.CollectionType {
+  collectionName: 'daily_accidents';
+  info: {
+    singularName: 'daily-accident';
+    pluralName: 'daily-accidents';
+    displayName: 'Daily Accident';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    date: Attribute.Date;
+    value: Attribute.Integer;
+    category: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::daily-accident.daily-accident',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::daily-accident.daily-accident',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiDailyDtpDailyDtp extends Schema.CollectionType {
+  collectionName: 'daily_dtps';
+  info: {
+    singularName: 'daily-dtp';
+    pluralName: 'daily-dtps';
+    displayName: 'Daily Dtp';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    date: Attribute.Date;
+    value: Attribute.Integer;
+    category: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::daily-dtp.daily-dtp',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::daily-dtp.daily-dtp',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiDailyIncidentDailyIncident extends Schema.CollectionType {
+  collectionName: 'daily_incidents';
+  info: {
+    singularName: 'daily-incident';
+    pluralName: 'daily-incidents';
+    displayName: 'Daily Incident';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    date: Attribute.Date;
+    value: Attribute.Integer;
+    category: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::daily-incident.daily-incident',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::daily-incident.daily-incident',
       'oneToOne',
       'admin::user'
     > &
@@ -1031,7 +1161,7 @@ export interface ApiDailyOilTransportationDailyOilTransportation
     value: Attribute.Decimal;
     value_coef: Attribute.Decimal;
     category: Attribute.String;
-    market: Attribute.String;
+    group: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1328,7 +1458,11 @@ declare module '@strapi/types' {
       'api::annual-oil-production.annual-oil-production': ApiAnnualOilProductionAnnualOilProduction;
       'api::annual-oil-refining.annual-oil-refining': ApiAnnualOilRefiningAnnualOilRefining;
       'api::annual-oil-transportation.annual-oil-transportation': ApiAnnualOilTransportationAnnualOilTransportation;
+      'api::brent.brent': ApiBrentBrent;
       'api::currency.currency': ApiCurrencyCurrency;
+      'api::daily-accident.daily-accident': ApiDailyAccidentDailyAccident;
+      'api::daily-dtp.daily-dtp': ApiDailyDtpDailyDtp;
+      'api::daily-incident.daily-incident': ApiDailyIncidentDailyIncident;
       'api::daily-oil-production.daily-oil-production': ApiDailyOilProductionDailyOilProduction;
       'api::daily-oil-refining.daily-oil-refining': ApiDailyOilRefiningDailyOilRefining;
       'api::daily-oil-transportation.daily-oil-transportation': ApiDailyOilTransportationDailyOilTransportation;

@@ -27,7 +27,7 @@
     "category": {
       "type": "string"
     },
-    "market": {
+    "group": {
       "type": "string"
     }
   }

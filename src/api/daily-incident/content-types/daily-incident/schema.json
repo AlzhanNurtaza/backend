@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "daily_incidents",
+  "info": {
+    "singularName": "daily-incident",
+    "pluralName": "daily-incidents",
+    "displayName": "Daily Incident"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "date": {
+      "type": "date"
+    },
+    "value": {
+      "type": "integer"
+    },
+    "category": {
+      "type": "string"
+    }
+  }
+}
