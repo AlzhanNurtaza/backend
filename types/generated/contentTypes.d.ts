@@ -1180,6 +1180,40 @@ export interface ApiDailyOilTransportationDailyOilTransportation
   };
 }
 
+export interface ApiDailyStockDailyStock extends Schema.CollectionType {
+  collectionName: 'daily_stocks';
+  info: {
+    singularName: 'daily-stock';
+    pluralName: 'daily-stocks';
+    displayName: 'Daily Stock';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    date: Attribute.Date;
+    category: Attribute.String;
+    value: Attribute.Float;
+    arrow: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::daily-stock.daily-stock',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::daily-stock.daily-stock',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiDepositDeposit extends Schema.CollectionType {
   collectionName: 'deposits';
   info: {
@@ -1466,6 +1500,7 @@ declare module '@strapi/types' {
       'api::daily-oil-production.daily-oil-production': ApiDailyOilProductionDailyOilProduction;
       'api::daily-oil-refining.daily-oil-refining': ApiDailyOilRefiningDailyOilRefining;
       'api::daily-oil-transportation.daily-oil-transportation': ApiDailyOilTransportationDailyOilTransportation;
+      'api::daily-stock.daily-stock': ApiDailyStockDailyStock;
       'api::deposit.deposit': ApiDepositDeposit;
       'api::dtp.dtp': ApiDtpDtp;
       'api::incident.incident': ApiIncidentIncident;

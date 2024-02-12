@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "daily_stocks",
+  "info": {
+    "singularName": "daily-stock",
+    "pluralName": "daily-stocks",
+    "displayName": "Daily Stock",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "date": {
+      "type": "date"
+    },
+    "category": {
+      "type": "string"
+    },
+    "value": {
+      "type": "float"
+    },
+    "arrow": {
+      "type": "string"
+    }
+  }
+}
