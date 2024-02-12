@@ -954,7 +954,7 @@ export interface ApiCurrencyCurrency extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    currency: Attribute.String;
+    category: Attribute.String;
     value: Attribute.String;
     arrow: Attribute.String;
     date: Attribute.Date;
@@ -1443,13 +1443,14 @@ export interface ApiShareShare extends Schema.CollectionType {
     singularName: 'share';
     pluralName: 'shares';
     displayName: 'Share';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     date: Attribute.Date;
-    title: Attribute.String;
+    category: Attribute.String;
     value: Attribute.String;
     arrow: Attribute.String;
     createdAt: Attribute.DateTime;
