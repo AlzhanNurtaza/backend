@@ -12,14 +12,14 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "year": {
-      "type": "integer"
-    },
     "value": {
       "type": "float"
     },
     "category": {
       "type": "string"
+    },
+    "date": {
+      "type": "date"
     }
   }
 }

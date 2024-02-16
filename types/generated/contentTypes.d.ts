@@ -1226,9 +1226,9 @@ export interface ApiDepositDeposit extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    year: Attribute.Integer;
     value: Attribute.Float;
     category: Attribute.String;
+    date: Attribute.Date;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1315,9 +1315,9 @@ export interface ApiIncomeIncome extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    year: Attribute.Integer;
     value: Attribute.Float;
     category: Attribute.String;
+    date: Attribute.Date;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
