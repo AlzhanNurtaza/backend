@@ -768,180 +768,6 @@ export interface PluginI18NLocale extends Schema.CollectionType {
   };
 }
 
-export interface ApiAccidentAccident extends Schema.CollectionType {
-  collectionName: 'accidents';
-  info: {
-    singularName: 'accident';
-    pluralName: 'accidents';
-    displayName: 'Accident';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    year: Attribute.Integer;
-    value: Attribute.Integer;
-    category: Attribute.String;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::accident.accident',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::accident.accident',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiAnnualOilProductionAnnualOilProduction
-  extends Schema.CollectionType {
-  collectionName: 'annual_oil_productions';
-  info: {
-    singularName: 'annual-oil-production';
-    pluralName: 'annual-oil-productions';
-    displayName: 'Annual Oil Production';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    year: Attribute.Integer;
-    dzo: Attribute.String;
-    value: Attribute.Decimal;
-    value_coef: Attribute.Decimal;
-    category: Attribute.String;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::annual-oil-production.annual-oil-production',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::annual-oil-production.annual-oil-production',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiAnnualOilRefiningAnnualOilRefining
-  extends Schema.CollectionType {
-  collectionName: 'annual_oil_refinings';
-  info: {
-    singularName: 'annual-oil-refining';
-    pluralName: 'annual-oil-refinings';
-    displayName: 'Annual Oil Refining';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    year: Attribute.Integer;
-    dzo: Attribute.String;
-    value: Attribute.Decimal;
-    value_coef: Attribute.Decimal;
-    category: Attribute.String;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::annual-oil-refining.annual-oil-refining',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::annual-oil-refining.annual-oil-refining',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiAnnualOilTransportationAnnualOilTransportation
-  extends Schema.CollectionType {
-  collectionName: 'annual_oil_transportations';
-  info: {
-    singularName: 'annual-oil-transportation';
-    pluralName: 'annual-oil-transportations';
-    displayName: 'Annual Oil Transportation';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    year: Attribute.Integer;
-    dzo: Attribute.String;
-    value: Attribute.Decimal;
-    value_coef: Attribute.Decimal;
-    category: Attribute.String;
-    group: Attribute.String;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::annual-oil-transportation.annual-oil-transportation',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::annual-oil-transportation.annual-oil-transportation',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiBrentBrent extends Schema.CollectionType {
-  collectionName: 'brents';
-  info: {
-    singularName: 'brent';
-    pluralName: 'brents';
-    displayName: 'Brent';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    date: Attribute.Date;
-    title: Attribute.String;
-    arrow: Attribute.String;
-    value: Attribute.String;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::brent.brent',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::brent.brent',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface ApiCurrencyCurrency extends Schema.CollectionType {
   collectionName: 'currencies';
   info: {
@@ -1247,62 +1073,6 @@ export interface ApiDepositDeposit extends Schema.CollectionType {
   };
 }
 
-export interface ApiDtpDtp extends Schema.CollectionType {
-  collectionName: 'dtps';
-  info: {
-    singularName: 'dtp';
-    pluralName: 'dtps';
-    displayName: 'Dtp';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    year: Attribute.Integer;
-    value: Attribute.Integer;
-    category: Attribute.String;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<'api::dtp.dtp', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<'api::dtp.dtp', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-  };
-}
-
-export interface ApiIncidentIncident extends Schema.CollectionType {
-  collectionName: 'incidents';
-  info: {
-    singularName: 'incident';
-    pluralName: 'incidents';
-    displayName: 'Incident';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    year: Attribute.Integer;
-    value: Attribute.Integer;
-    category: Attribute.String;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::incident.incident',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::incident.incident',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface ApiIncomeIncome extends Schema.CollectionType {
   collectionName: 'incomes';
   info: {
@@ -1370,73 +1140,6 @@ export interface ApiPurchasePurchase extends Schema.CollectionType {
   };
 }
 
-export interface ApiQuarterlyIncomeQuarterlyIncome
-  extends Schema.CollectionType {
-  collectionName: 'quarterly_incomes';
-  info: {
-    singularName: 'quarterly-income';
-    pluralName: 'quarterly-incomes';
-    displayName: 'Quarterly Income';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    date: Attribute.Date;
-    value: Attribute.Float;
-    category: Attribute.String;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::quarterly-income.quarterly-income',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::quarterly-income.quarterly-income',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiQuaterlyDepositQuaterlyDeposit
-  extends Schema.CollectionType {
-  collectionName: 'quaterly_deposits';
-  info: {
-    singularName: 'quaterly-deposit';
-    pluralName: 'quaterly-deposits';
-    displayName: 'Quaterly Deposit';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    date: Attribute.Date;
-    value: Attribute.Float;
-    category: Attribute.String;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::quaterly-deposit.quaterly-deposit',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::quaterly-deposit.quaterly-deposit',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface ApiShareShare extends Schema.CollectionType {
   collectionName: 'shares';
   info: {
@@ -1489,11 +1192,6 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
-      'api::accident.accident': ApiAccidentAccident;
-      'api::annual-oil-production.annual-oil-production': ApiAnnualOilProductionAnnualOilProduction;
-      'api::annual-oil-refining.annual-oil-refining': ApiAnnualOilRefiningAnnualOilRefining;
-      'api::annual-oil-transportation.annual-oil-transportation': ApiAnnualOilTransportationAnnualOilTransportation;
-      'api::brent.brent': ApiBrentBrent;
       'api::currency.currency': ApiCurrencyCurrency;
       'api::daily-accident.daily-accident': ApiDailyAccidentDailyAccident;
       'api::daily-dtp.daily-dtp': ApiDailyDtpDailyDtp;
@@ -1503,12 +1201,8 @@ declare module '@strapi/types' {
       'api::daily-oil-transportation.daily-oil-transportation': ApiDailyOilTransportationDailyOilTransportation;
       'api::daily-stock.daily-stock': ApiDailyStockDailyStock;
       'api::deposit.deposit': ApiDepositDeposit;
-      'api::dtp.dtp': ApiDtpDtp;
-      'api::incident.incident': ApiIncidentIncident;
       'api::income.income': ApiIncomeIncome;
       'api::purchase.purchase': ApiPurchasePurchase;
-      'api::quarterly-income.quarterly-income': ApiQuarterlyIncomeQuarterlyIncome;
-      'api::quaterly-deposit.quaterly-deposit': ApiQuaterlyDepositQuaterlyDeposit;
       'api::share.share': ApiShareShare;
     }
   }
