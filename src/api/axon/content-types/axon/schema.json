@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "axons",
+  "info": {
+    "singularName": "axon",
+    "pluralName": "axons",
+    "displayName": "Axon"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "refNumber": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "systemName": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

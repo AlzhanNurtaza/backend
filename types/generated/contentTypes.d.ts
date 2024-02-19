@@ -768,6 +768,31 @@ export interface PluginI18NLocale extends Schema.CollectionType {
   };
 }
 
+export interface ApiAxonAxon extends Schema.CollectionType {
+  collectionName: 'axons';
+  info: {
+    singularName: 'axon';
+    pluralName: 'axons';
+    displayName: 'Axon';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    refNumber: Attribute.String;
+    name: Attribute.String;
+    systemName: Attribute.String;
+    description: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::axon.axon', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::axon.axon', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
 export interface ApiCurrencyCurrency extends Schema.CollectionType {
   collectionName: 'currencies';
   info: {
@@ -1192,6 +1217,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
+      'api::axon.axon': ApiAxonAxon;
       'api::currency.currency': ApiCurrencyCurrency;
       'api::daily-accident.daily-accident': ApiDailyAccidentDailyAccident;
       'api::daily-dtp.daily-dtp': ApiDailyDtpDailyDtp;
