@@ -994,43 +994,6 @@ export interface ApiDailyOilRefiningDailyOilRefining
   };
 }
 
-export interface ApiDailyOilTransportationDailyOilTransportation
-  extends Schema.CollectionType {
-  collectionName: 'daily_oil_transportations';
-  info: {
-    singularName: 'daily-oil-transportation';
-    pluralName: 'daily-oil-transportations';
-    displayName: 'Daily Oil Transportation';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    date: Attribute.Date;
-    dzo: Attribute.String;
-    value: Attribute.Decimal;
-    value_coef: Attribute.Decimal;
-    category: Attribute.String;
-    group: Attribute.String;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::daily-oil-transportation.daily-oil-transportation',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::daily-oil-transportation.daily-oil-transportation',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface ApiDailyStockDailyStock extends Schema.CollectionType {
   collectionName: 'daily_stocks';
   info: {
@@ -1131,6 +1094,44 @@ export interface ApiIncomeIncome extends Schema.CollectionType {
   };
 }
 
+export interface ApiOilTransportationOilTransportation
+  extends Schema.CollectionType {
+  collectionName: 'oil_transportations';
+  info: {
+    singularName: 'oil-transportation';
+    pluralName: 'oil-transportations';
+    displayName: 'Oil Transportation';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    date: Attribute.Date;
+    dzo: Attribute.String;
+    value: Attribute.Float;
+    value_coef: Attribute.Float;
+    category: Attribute.String;
+    market: Attribute.String;
+    export: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::oil-transportation.oil-transportation',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::oil-transportation.oil-transportation',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiPurchasePurchase extends Schema.CollectionType {
   collectionName: 'purchases';
   info: {
@@ -1224,10 +1225,10 @@ declare module '@strapi/types' {
       'api::daily-incident.daily-incident': ApiDailyIncidentDailyIncident;
       'api::daily-oil-production.daily-oil-production': ApiDailyOilProductionDailyOilProduction;
       'api::daily-oil-refining.daily-oil-refining': ApiDailyOilRefiningDailyOilRefining;
-      'api::daily-oil-transportation.daily-oil-transportation': ApiDailyOilTransportationDailyOilTransportation;
       'api::daily-stock.daily-stock': ApiDailyStockDailyStock;
       'api::deposit.deposit': ApiDepositDeposit;
       'api::income.income': ApiIncomeIncome;
+      'api::oil-transportation.oil-transportation': ApiOilTransportationOilTransportation;
       'api::purchase.purchase': ApiPurchasePurchase;
       'api::share.share': ApiShareShare;
     }

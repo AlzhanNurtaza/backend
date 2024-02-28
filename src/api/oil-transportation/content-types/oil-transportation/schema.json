@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "daily_oil_transportations",
+  "collectionName": "oil_transportations",
   "info": {
-    "singularName": "daily-oil-transportation",
-    "pluralName": "daily-oil-transportations",
-    "displayName": "Daily Oil Transportation",
+    "singularName": "oil-transportation",
+    "pluralName": "oil-transportations",
+    "displayName": "Oil Transportation",
     "description": ""
   },
   "options": {
@@ -19,15 +19,18 @@
       "type": "string"
     },
     "value": {
-      "type": "decimal"
+      "type": "float"
     },
     "value_coef": {
-      "type": "decimal"
+      "type": "float"
     },
     "category": {
       "type": "string"
     },
-    "group": {
+    "market": {
+      "type": "string"
+    },
+    "export": {
       "type": "string"
     }
   }
