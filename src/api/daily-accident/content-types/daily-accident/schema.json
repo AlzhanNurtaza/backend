@@ -4,7 +4,8 @@
   "info": {
     "singularName": "daily-accident",
     "pluralName": "daily-accidents",
-    "displayName": "Daily Accident"
+    "displayName": "Daily Accident",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -18,6 +19,15 @@
       "type": "integer"
     },
     "category": {
+      "type": "string"
+    },
+    "location": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "dzo": {
       "type": "string"
     }
   }

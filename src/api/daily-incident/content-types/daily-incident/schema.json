@@ -4,7 +4,8 @@
   "info": {
     "singularName": "daily-incident",
     "pluralName": "daily-incidents",
-    "displayName": "Daily Incident"
+    "displayName": "Daily Incident",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -18,6 +19,15 @@
       "type": "integer"
     },
     "category": {
+      "type": "string"
+    },
+    "location": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "dzo": {
       "type": "string"
     }
   }

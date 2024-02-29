@@ -833,6 +833,7 @@ export interface ApiDailyAccidentDailyAccident extends Schema.CollectionType {
     singularName: 'daily-accident';
     pluralName: 'daily-accidents';
     displayName: 'Daily Accident';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -841,6 +842,9 @@ export interface ApiDailyAccidentDailyAccident extends Schema.CollectionType {
     date: Attribute.Date;
     value: Attribute.Integer;
     category: Attribute.String;
+    location: Attribute.Text;
+    description: Attribute.Text;
+    dzo: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -865,6 +869,7 @@ export interface ApiDailyDtpDailyDtp extends Schema.CollectionType {
     singularName: 'daily-dtp';
     pluralName: 'daily-dtps';
     displayName: 'Daily Dtp';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -873,6 +878,9 @@ export interface ApiDailyDtpDailyDtp extends Schema.CollectionType {
     date: Attribute.Date;
     value: Attribute.Integer;
     category: Attribute.String;
+    location: Attribute.Text;
+    description: Attribute.Text;
+    dzo: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -897,6 +905,7 @@ export interface ApiDailyIncidentDailyIncident extends Schema.CollectionType {
     singularName: 'daily-incident';
     pluralName: 'daily-incidents';
     displayName: 'Daily Incident';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -905,6 +914,9 @@ export interface ApiDailyIncidentDailyIncident extends Schema.CollectionType {
     date: Attribute.Date;
     value: Attribute.Integer;
     category: Attribute.String;
+    location: Attribute.Text;
+    description: Attribute.Text;
+    dzo: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
