@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "kases",
+  "info": {
+    "singularName": "kase",
+    "pluralName": "kases",
+    "displayName": "Kase",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "date": {
+      "type": "date"
+    },
+    "category": {
+      "type": "string"
+    },
+    "value": {
+      "type": "decimal"
+    },
+    "arrow": {
+      "type": "string"
+    }
+  }
+}

@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "shares",
+  "collectionName": "aixes",
   "info": {
-    "singularName": "share",
-    "pluralName": "shares",
-    "displayName": "Share",
-    "description": ""
+    "singularName": "aix",
+    "pluralName": "aixes",
+    "displayName": "Aix"
   },
   "options": {
     "draftAndPublish": true
@@ -19,7 +18,7 @@
       "type": "string"
     },
     "value": {
-      "type": "string"
+      "type": "decimal"
     },
     "arrow": {
       "type": "string"

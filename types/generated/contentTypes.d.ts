@@ -768,6 +768,31 @@ export interface PluginI18NLocale extends Schema.CollectionType {
   };
 }
 
+export interface ApiAixAix extends Schema.CollectionType {
+  collectionName: 'aixes';
+  info: {
+    singularName: 'aix';
+    pluralName: 'aixes';
+    displayName: 'Aix';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    date: Attribute.Date;
+    category: Attribute.String;
+    value: Attribute.Decimal;
+    arrow: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::aix.aix', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::aix.aix', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
 export interface ApiAxonAxon extends Schema.CollectionType {
   collectionName: 'axons';
   info: {
@@ -1106,6 +1131,32 @@ export interface ApiIncomeIncome extends Schema.CollectionType {
   };
 }
 
+export interface ApiKaseKase extends Schema.CollectionType {
+  collectionName: 'kases';
+  info: {
+    singularName: 'kase';
+    pluralName: 'kases';
+    displayName: 'Kase';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    date: Attribute.Date;
+    category: Attribute.String;
+    value: Attribute.Decimal;
+    arrow: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::kase.kase', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::kase.kase', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
 export interface ApiOilTransportationOilTransportation
   extends Schema.CollectionType {
   collectionName: 'oil_transportations';
@@ -1178,40 +1229,6 @@ export interface ApiPurchasePurchase extends Schema.CollectionType {
   };
 }
 
-export interface ApiShareShare extends Schema.CollectionType {
-  collectionName: 'shares';
-  info: {
-    singularName: 'share';
-    pluralName: 'shares';
-    displayName: 'Share';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    date: Attribute.Date;
-    category: Attribute.String;
-    value: Attribute.String;
-    arrow: Attribute.String;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::share.share',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::share.share',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -1230,6 +1247,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
+      'api::aix.aix': ApiAixAix;
       'api::axon.axon': ApiAxonAxon;
       'api::currency.currency': ApiCurrencyCurrency;
       'api::daily-accident.daily-accident': ApiDailyAccidentDailyAccident;
@@ -1240,9 +1258,9 @@ declare module '@strapi/types' {
       'api::daily-stock.daily-stock': ApiDailyStockDailyStock;
       'api::deposit.deposit': ApiDepositDeposit;
       'api::income.income': ApiIncomeIncome;
+      'api::kase.kase': ApiKaseKase;
       'api::oil-transportation.oil-transportation': ApiOilTransportationOilTransportation;
       'api::purchase.purchase': ApiPurchasePurchase;
-      'api::share.share': ApiShareShare;
     }
   }
 }
